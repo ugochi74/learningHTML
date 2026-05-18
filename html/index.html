@@ -1,0 +1,43 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, there!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+      <h1 class="title">Hello there!</h1>
+      <p id="currentTime"></p>
+      <script src="script.js"></script>
+  </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, there!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+      <h1 class="title">Hello there!</h1>
+      
+      <!-- The time will appear inside this paragraph element -->
+      <p id="currentTime"></p>
+
+      <!-- This script runs directly inside your HTML file -->
+      <script>
+        const timeDisplay = document.getElementById("currentTime");
+
+        function updateClock() {
+            const now = new Date();
+            timeDisplay.textContent = "Current Time: " + now.toLocaleString();
+        }
+
+        // Run the clock immediately when the page loads
+        updateClock();
+
+        // Refresh the clock every single second
+        setInterval(updateClock, 1000);
+      </script>
+  </body>
+</html>
